@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+  <name>PLG_CONTENT_SETIMAGES</name>
+  <author>Helios Ciancio</author>
+  <creationDate>February 2017</creationDate>
+  <copyright>(C) 2014, 2017 Helios Ciancio. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL v3</license>
+  <authorEmail>info@eshiol.it</authorEmail>
+  <authorUrl>www.eshiol.it</authorUrl>
+  <version>3.6.26.60</version>
+  <description>PLG_CONTENT_SETIMAGES_XML_DESCRIPTION</description>
+  <scriptfile>enable.php</scriptfile>
+  <updateservers>
+    <server type="extension" priority="2" name="Set Images for Content">https://www.eshiol.it/downloads/j2xml/plg_content_setimages.xml</server>
+  </updateservers>
+  <files>
+    <filename plugin="setimages">setimages.php</filename>
+  </files>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_content_setimages.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_setimages.sys.ini</language>
+    <language tag="it-IT">it-IT/it-IT.plg_content_setimages.ini</language>
+    <language tag="it-IT">it-IT/it-IT.plg_content_setimages.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="image_intro" type="list" label="PLG_CONTENT_SETIMAGES_FIELD_INTRO_LABEL" description="PLG_CONTENT_SETIMAGES_FIELD_INTRO_DESC">
+          <option value="">JNONE</option>
+          <option value="1">PLG_CONTENT_SETIMAGES_1ST_INTRO</option>
+        </field>
+        <field name="float_intro" type="list" label="PLG_CONTENT_SETIMAGES_FLOAT_LABEL" description="PLG_CONTENT_SETIMAGES_FLOAT_DESC">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="right">PLG_CONTENT_SETIMAGES_RIGHT</option>
+          <option value="left">PLG_CONTENT_SETIMAGES_LEFT</option>
+          <option value="none">PLG_CONTENT_SETIMAGES_NONE</option>
+        </field>
+        <field name="image_intro_alt" class="btn-group" type="radio" label="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_ALT_LABEL" description="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_ALT_DESC">
+          <option value="">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="image_intro_caption" class="btn-group" type="radio" label="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_CAPTION_LABEL" description="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_CAPTION_DESC">
+          <option value="">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="spacer1" type="spacer" hr="true"/>
+        <field name="image_fulltext" type="list" label="PLG_CONTENT_SETIMAGES_FIELD_FULL_LABEL" description="PLG_CONTENT_SETIMAGES_FIELD_FULL_DESC">
+          <option value="">JNONE</option>
+          <option value="1">PLG_CONTENT_SETIMAGES_1ST_INTRO</option>
+          <option value="2">PLG_CONTENT_SETIMAGES_1ST_FULL_OR_INTRO</option>
+          <option value="3">PLG_CONTENT_SETIMAGES_1ST_FULL</option>
+        </field>
+        <field name="float_fulltext" type="list" label="PLG_CONTENT_SETIMAGES_FLOAT_LABEL" description="PLG_CONTENT_SETIMAGES_FLOAT_DESC">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="right">PLG_CONTENT_SETIMAGES_RIGHT</option>
+          <option value="left">PLG_CONTENT_SETIMAGES_LEFT</option>
+          <option value="none">PLG_CONTENT_SETIMAGES_NONE</option>
+        </field>
+        <field name="image_fulltext_alt" class="btn-group" type="radio" label="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_ALT_LABEL" description="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_ALT_DESC">
+          <option value="">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="image_fulltext_caption" class="btn-group" type="radio" label="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_CAPTION_LABEL" description="PLG_CONTENT_SETIMAGES_FIELD_IMAGE_CAPTION_DESC">
+          <option value="">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="image_fulltext_force" class="btn-group" type="radio" label="PLG_CONTENT_SETIMAGES_FIELD_FORCE_CAPTION_LABEL" description="PLG_CONTENT_SETIMAGES_FIELD_FORCE_CAPTION_DESC">
+          <option value="">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="debug" type="radio" default="0" class="btn-group btn-group-yesno" description="PLG_CONTENT_SETIMAGES_DEBUG_SYSTEM_DESC" label="PLG_CONTENT_SETIMAGES_DEBUG_SYSTEM_LABEL">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="log" type="text" label="PLG_CONTENT_SETIMAGES_DEBUG_FILENAME_LABEL" description="PLG_CONTENT_SETIMAGES_DEBUG_FILENAME_DESC" default="eshiol.log.php" showon="debug:1"/>
+        <field name="phpconsole" type="radio" class="btn-group btn-group-yesno" default="0" description="PLG_CONTENT_SETIMAGES_DEBUG_PHPCONSOLE_DESC" label="PLG_CONTENT_SETIMAGES_DEBUG_PHPCONSOLE_LABEL">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>
